@@ -81,7 +81,7 @@ def print_frame(frame):
     row_num = len(frame)
     print("\033[{}A".format(row_num + 1))
     for row in frame:
-        print(" ".join(row))
+        print("".join(["███" if i == "1" else "   " for i in row]))
 
 
 def main():
